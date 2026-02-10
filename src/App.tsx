@@ -84,7 +84,7 @@ function App() {
     <div className="main-column-container">
         <div className="content-container">
             <div className="main-image-container">
-                <img src={state.image} alt="cute-image"/>
+                <img src={process.env.PUBLIC_URL + state.image} alt="cute-image"/>
             </div>
             <span className="query-paragraph">{state.query}</span>
             {state.nextState === null ?
@@ -104,7 +104,7 @@ function App() {
         {state.image === "/static/happy-doggo.gif" &&
             <div>
             <span className="additional-text">Literalnie ja w tym momencie:</span>
-            <img width="100px" src="/static/jamnik-w-lozeczku.jpg"/>
+            <img width="100px" src={process.env.PUBLIC_URL + "/static/jamnik-w-lozeczku.jpg"}/>
             </div>
         }
     </div>

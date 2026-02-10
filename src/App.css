@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+.main-column-container {
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-image-container {
+    width: 100%;
+
+    border-radius: 24px;
+
+    border: 4px solid #ff4d6d;
+    background:
+        linear-gradient(135deg, #fff 0%, #ffe0ea 35%, #fff 100%) padding-box,
+        linear-gradient(135deg, #ff4d6d, #ff85a1, #ffccd8) border-box;
+
+    box-shadow:
+        0 12px 30px rgba(255, 77, 109, 0.25),
+        0 0 0 6px rgba(255, 133, 161, 0.18);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-image-container img {
+    display: block;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+
+    border-radius: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.content-container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    margin: 10vh 0 0 0;
+    height: 60vh;
+    padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.query-paragraph {
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttons-container {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.buttons-container button {
+    appearance: none;
+    border: 2px solid rgba(255, 77, 109, 0.55);
+    border-radius: 999px;
+
+    padding: 12px 22px;
+    min-width: 120px;
+
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: #7a1030;
+    background: linear-gradient(180deg, #ffffff 0%, #ffe1ea 100%);
+    box-shadow:
+        0 10px 22px rgba(255, 77, 109, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+    cursor: pointer;
+    user-select: none;
+
+    transition:
+        transform 140ms ease,
+        box-shadow 180ms ease,
+        background 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease,
+        filter 180ms ease;
+}
+
+.buttons-container button:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 77, 109, 0.9);
+    background: linear-gradient(180deg, #ffffff 0%, #ffc2d1 100%);
+    box-shadow:
+        0 14px 28px rgba(255, 77, 109, 0.26),
+        inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.buttons-container button:active {
+    transform: translateY(0px) scale(0.98);
+    background: linear-gradient(180deg, #ffb3c6 0%, #ff8fab 100%);
+    color: #fff;
+    border-color: rgba(255, 77, 109, 1);
+    box-shadow:
+        0 8px 16px rgba(255, 77, 109, 0.20),
+        inset 0 3px 10px rgba(122, 16, 48, 0.25);
+}
+
+.buttons-container button:focus-visible {
+    outline: none;
+    box-shadow:
+        0 0 0 4px rgba(255, 255, 255, 0.9),
+        0 0 0 8px rgba(255, 77, 109, 0.45),
+        0 10px 22px rgba(255, 77, 109, 0.18);
+}
+
+.buttons-container button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    filter: grayscale(0.25);
+}
+
+/* Optional: make YES extra sweet, NO a bit cooler — no TSX changes needed */
+.buttons-container button:first-child {
+    border-color: rgba(255, 77, 109, 0.65);
+    background: linear-gradient(180deg, #ffffff 0%, #ffd6e0 100%);
+}
+
+.buttons-container button:first-child:hover {
+    background: linear-gradient(180deg, #ffffff 0%, #ffb3c6 100%);
+}
+
+.buttons-container button:last-child {
+    border-color: rgba(183, 110, 146, 0.55);
+    color: #5a0f2e;
+    background: linear-gradient(180deg, #ffffff 0%, #f4d7e6 100%);
+}
+
+.buttons-container button:last-child:hover {
+    border-color: rgba(183, 110, 146, 0.9);
+    background: linear-gradient(180deg, #ffffff 0%, #e9bcd4 100%);
+}
+
+.buttons-container button:last-child:active {
+    background: linear-gradient(180deg, #dba6c3 0%, #b76e92 100%);
+    color: #fff;
+}
+
+.additional-text {
+    text-align: center;
+    margin: 1rem;
 }

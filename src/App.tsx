@@ -64,7 +64,6 @@ function App() {
 
     function handleYes() {
         if (state.image === "/static/sad-henio.webp") {
-            alert("No weź pls")
             setYesNoReverse(!yesNoReverse)
             return
         }
